@@ -1,0 +1,572 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{ font-size: 1em;}
+h2{ font-size: 1.5em;}
+h3{ font-size: 1.6em;}
+h4{ font-size: 0.7em; padding: 0; margin: 0;}
+p{ font-size: 1em;}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.boton{
+    font-size: 1em;
+    padding: 7px 30px;
+    border-radius: 8px;
+    width: auto;
+    border: none;    
+    color: black;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: left;
+    margin-left: 15px;
+}
+
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    background-color: rgba(245, 245, 245, 245);
+}
+
+header .container{
+    display: flex;
+    justify-content:top;
+}
+
+header .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+header .head-logo{
+    margin: 10px 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+
+header h1{
+    margin: 15px -10px;
+    font-size: 1.5em;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+header a{
+    font-size: 1.1em;
+    padding: 2px 6px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.822);
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+#vista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+    height: 70vh;
+    background-image: linear-gradient( 0deg,
+    rgba(255, 255, 255, 0.7), 
+    rgba(255, 255, 255, 0.7)),
+    url(image/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+#vista .logos{
+    width: auto;
+    height: 70px;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#vista button{
+    font-size: 1em;
+    padding: 7px 30px;
+    border-radius: 8px;
+    border: none;    
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 5);
+    color: rgba(245, 245, 245, 245);
+    background-color: rgba(0, 0, 0, 5);
+}
+
+#vista button:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.822);
+}
+
+#nosotros h2{
+    margin: 15px 0px;
+    font-size: 2em;
+    text-align: center;
+}
+#nosotros .inicio{
+    text-align: left;
+    margin: 0px 20px;
+}
+
+#nosotros .benf, li{
+    text-align: left;
+    margin: 0px 20px;
+    list-style-type: none;
+}
+
+#nosotros .point{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+#nosotros .img-nosotros{
+    width: auto;
+    height: 60vh;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 100px;
+}
+
+#mision h2{
+    font-size: 3em;
+    text-align: left;
+    margin: 4vh 4vh auto auto;
+}
+
+
+#mision .logo{
+    width: 50px;
+    height: auto;
+    margin-left: 0vh;
+}
+
+#mision h3{
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+#mision .logo-val{
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    align-items: center;
+    margin-left: 0vh;
+}
+
+#mision .ini-mision {
+    margin: 4vh 4vh auto 4vh;
+}
+
+#mision .val{
+    margin: 4vh 4vh auto 4vh;
+}
+
+#mision .val p{
+    text-align: left;
+    margin-left: 3vh;
+}
+
+#mision strong{
+    font-size: 1.1em;   
+}
+
+#mision .image-val-vis img{
+    max-width: 80%;
+    margin: auto;   /* nunca sobrepasará el ancho de su contenedor */
+    height: auto;      /* mantiene la proporción original de la imagen */
+    display: block;
+    border-radius: 20px;
+}
+
+#service h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+#service .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 40px;
+}
+
+#service button{
+    border-radius: 10px;
+    border: none;    
+}
+
+#service .img-serv{
+    width: 70px;
+    height: 70px;
+    margin: 20px 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#service .img{
+    width: 35px;
+    height: 35px;
+    margin: auto;
+}
+
+#service .serv-des, .serv-res, .serv-for, .serv-con{
+    text-align: left;
+    margin: 20px 20px;
+    padding: 10px 100px 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+#service .serv-des, .serv-res, .serv-for, .serv-con:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(19, 18, 18, 0.2);
+}
+
+#service .container{
+    margin-bottom: 150px;
+}
+
+#evidencia h2{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#evidencia .cabeza p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 2vh;
+}
+
+#evidencia .evid h3, .evid p{
+    display: flex;
+    flex-direction: column;
+    padding: 0vh 2vh;
+    align-items: left;
+    margin: 0px 10px;
+}
+
+#evidencia .evid h3{
+    font-size: 1.5em;
+    text-align: left;
+}
+
+#evidencia .evid p{
+    font-size: 0.8em;
+    text-align: left;
+}
+
+
+#evidencia .evi1, .evi2, .evi3, .evi4, .evi5, .evi6, .evi7{
+    font-size: 0.8em;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;;
+    padding: 25vh 0px 0px 0vh;
+    text-align: bottom;
+    align-items: left;
+    margin: 0px 10px;
+    height: 40vh;
+    color: white;
+    background-image: linear-gradient( 0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url(image/evidencias/evidencia1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+#evidencia .evi2{
+    background-image: linear-gradient( 0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url(image/evidencias/evidencia2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#evidencia .evi3{
+    background-image: linear-gradient( 0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url(image/evidencias/evidencia3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#evidencia .evi4{
+    background-image: linear-gradient( 0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url(image/evidencias/evidencia4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#evidencia .evi5{
+    background-image: linear-gradient( 0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url(image/evidencias/evidencia5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#evidencia .evi6{
+    background-image: linear-gradient( 0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url(image/evidencias/evidencia6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#evidencia .evi7{
+    background-image: linear-gradient( 0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url(image/evidencias/evidencia7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#testimonio h2{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#testimonio p{
+    font-size: 0.9em;
+    text-align: left;
+    margin: 10px 0px 5px 0px;
+}
+
+#testimonio .test h3{
+    margin: 0px 0 0 0;
+    padding: 0px;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+#testimonio img{
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    margin: 5px 0px 5px 0px;
+}
+
+#testimonio .tes1{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    padding: 40px 25px 40px 30px;
+    margin: 20px;
+}
+
+#testimonio .tes1:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(19, 18, 18, 0.2);
+}
+
+
+footer img{
+    width: 30px;
+    height: 30px;
+    margin: 0px 5px;
+    vertical-align: bottom;
+}
+
+footer .contac{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: rgb(100,100,100);
+    height: 100px;
+    background: #eee;
+}
+
+@media (min-width: 720px) {
+
+    .container{
+    max-width: 100%;
+    margin: auto;
+    }
+
+    header{
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+        
+    }
+    header .container{
+    position: fixed;
+    width: 100%;
+    }
+
+    header nav{
+    flex-direction: row;
+    margin-left: auto;
+    padding: 20px;
+    }
+
+    #nosotros .all {
+    display: flex;
+    flex-direction: row; /* invierte el orden: imagen a la derecha */
+    align-items: top;
+    gap: 200px;
+    font-size: 1.2em;
+    margin-bottom: 200px;
+    }
+
+    #nosotros .inicio{
+    text-align: top;
+    margin: 0vh 5vh 0 25vh;
+    }
+
+    #nosotros h2{
+    text-align: left;
+    }
+    
+    #nosotros .img-nosotros{
+    margin: auto;
+    margin-right: 50vh;
+    }
+
+    #mision .image-val-vis img{
+    max-width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 200px;   /* nunca sobrepasará el ancho de su contenedor */
+    height: auto;      /* mantiene la proporción original de la imagen */
+    display: block;
+    border-radius: 20px;
+    }
+
+    #mision .ini-mision, .val{
+    margin: 4vh 100vh auto 4vh;
+    }
+
+    #service h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    }
+
+    #service button{
+    border-radius: 10px;
+    border: none;    
+    }
+
+    #service .img-serv{
+    width: 70px;
+    height: 70px;
+    margin: 20px 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    }
+
+    #service .all{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 32px; /* espacio entre tarjetas */
+    margin: 40px 0;
+    }
+
+    #service .serv-des, .serv-res, .serv-for, .serv-con{
+    text-align: left;
+    margin: 20px 20px;
+    padding: 10px 100px 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #service .serv-des, .serv-res, .serv-for, .serv-con:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(19, 18, 18, 0.2);
+    }
+
+    #service .container{
+    margin-bottom: 150px;
+    }
+
+    #evidencia .evi1{
+    width: 200vh;
+    height: 50vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    object-fit: cover;
+    padding: 35vh 20vh 1vh 3vh;
+    }
+
+    #evidencia .evid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 15px; /* espacio entre tarjetas */
+    margin: 40px 0;
+    }
+
+    #evidencia .evid h3{
+    font-size: 1.5em;
+    padding: 3vh 0vh 0vh 1vh;
+    }
+
+    #evidencia .evid p{
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: auto;
+    }   
+
+    #testimonio .test{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 32px; /* espacio entre tarjetas */
+    margin: 40px 0;
+    }
+}
+
+
+
