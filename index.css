@@ -2,11 +2,15 @@
     box-sizing: border-box;
 }
 
+
+
 h1{ font-size: 1em;}
 h2{ font-size: 1.5em;}
 h3{ font-size: 1.6em;}
 h4{ font-size: 0.7em; padding: 0; margin: 0;}
 p{ font-size: 1em;}
+
+
 
 body{
     margin: 0;
@@ -33,6 +37,7 @@ body{
 
 header {
     background-color: rgba(245, 245, 245, 245);
+    width: 100%;
 }
 
 header .container{
@@ -270,30 +275,23 @@ header a:hover{
     margin: 2vh;
 }
 
-#evidencia .evid h3, .evid p{
-    display: flex;
-    flex-direction: column;
-    padding: 0vh 2vh;
-    align-items: left;
-    margin: 0px 10px;
+#evidencia .container h3 {
+    margin: 2vh 1vh;
+    position: absolute;
+    bottom: 0;
 }
-
 #evidencia .evid h3{
     font-size: 1.5em;
     text-align: left;
 }
 
-#evidencia .evid p{
-    font-size: 0.8em;
-    text-align: left;
-}
-
 
 #evidencia .evi1, .evi2, .evi3, .evi4, .evi5, .evi6, .evi7{
+    position: relative;
     font-size: 0.8em;
     border-radius: 20px;
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
     padding: 25vh 0px 0px 0vh;
     text-align: bottom;
     align-items: left;
@@ -301,13 +299,15 @@ header a:hover{
     height: 40vh;
     color: white;
     background-image: linear-gradient( 0deg,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)),
-    url(image/evidencias/evidencia1.png);
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url(image/evidencias/evidencia1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;  /* <-- esta línea centra siempre la imagen */
     margin-bottom: 50px;
 }
+
 
 #evidencia .evi2{
     background-image: linear-gradient( 0deg,
@@ -426,40 +426,67 @@ footer .contac{
 @media (min-width: 720px) {
 
     .container{
-    max-width: 100%;
-    margin: auto;
+        max-width: 100%;
+        margin: auto;
     }
 
-    header{
-    flex-direction: row;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-        
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000; /* importante: estar por encima de las fotos */
+        background-color: rgba(245, 245, 245, 1);
     }
+
     header .container{
-    position: fixed;
-    width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    header .header{
+        display: flex;
+        justify-content: flex-start; /* menú a la izquierda */
+        padding-bottom: 10px;
     }
 
     header nav{
-    flex-direction: row;
-    margin-left: auto;
-    padding: 20px;
+        display: flex;
+        flex-direction: row; /* enlaces en fila en escritorio */
+        gap: 12px;
+        padding: 0;
+    }
+
+    header a{
+    font-size: 1.1em;
+    padding: 2px 6px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.822);
+    }
+
+    header a:hover{
+        text-decoration: underline;
     }
 
     #nosotros .all {
     display: flex;
     flex-direction: row; /* invierte el orden: imagen a la derecha */
     align-items: top;
-    gap: 200px;
+    gap: 80px;
     font-size: 1.2em;
     margin-bottom: 200px;
     }
 
     #nosotros .inicio{
     text-align: top;
-    margin: 0vh 5vh 0 25vh;
+    margin: 0vh 0vh 0 40vh;
     }
 
     #nosotros h2{
@@ -468,7 +495,7 @@ footer .contac{
     
     #nosotros .img-nosotros{
     margin: auto;
-    margin-right: 50vh;
+    margin-right: 40vh;
     }
 
     #mision .image-val-vis img{
@@ -547,18 +574,10 @@ footer .contac{
     margin: 40px 0;
     }
 
-    #evidencia .evid h3{
-    font-size: 1.5em;
+    #evidencia .container h3{
+    font-size: 1.9em;
     padding: 3vh 0vh 0vh 1vh;
     }
-
-    #evidencia .evid p{
-    font-size: 1em;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: auto;
-    }   
 
     #testimonio .test{
     display: grid;
